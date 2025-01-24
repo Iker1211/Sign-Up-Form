@@ -1,3 +1,18 @@
+:root {
+    --violet: #40295e;
+    --blue: #13222e;
+    --white: #f5f5f5;
+    --black: #1a1a1a;
+    --gray: #5a5a5a;
+    --yellow: #e3c200;
+    --line-height: 1.6;
+    --font-size-base: 1rem;
+    --font-size-md: clamp(0.625rem, 0.305vw + 0.55rem, 0.79rem);
+    --font-size-lg: clamp(0.975rem, 0.625vw + 0.82rem, 1.32rem);
+    --font-size-xl: clamp(1.525rem, 1.4875vw + 1.15625rem, 2.34375rem);
+    --font-family: "Arial", sans-serif;
+  }
+
 body {
 background-image: url('assets/images/image.jpg');
 background-size: cover;
