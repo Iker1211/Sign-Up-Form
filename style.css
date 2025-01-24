@@ -10,4 +10,9 @@ h1 {
     color: white;
 }
 
+.logo-container {
+    width: 200px;
+    height: 200px;
+}
+
 /* media query  when mobile background image -50below*/
