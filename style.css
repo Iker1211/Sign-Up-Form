@@ -1,0 +1,13 @@
+body {
+background-image: url('assets/images/image.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 42px;
+    text-align: center;
+    color: white;
+}
+
+/* media query  when mobile background image -50below*/
