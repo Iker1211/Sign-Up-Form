@@ -14,17 +14,18 @@
   }
 
 body {
+height: 100vh;
 background-image: url('assets/images/image.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 display: flex;
 flex-direction: column;
+justify-content: center;
 align-items: center;
 }
 
 h1 {
     font-size: 42px;
-    text-align: center;
     color: white;
 }
 
