@@ -47,6 +47,7 @@
     --black: #1a1a1a;
     --gray: #5a5a5a;
     --yellow: #e3c200;
+    --transparent: #00ffffff;
     --line-height: 1.6;
     --font-size-base: 1rem;
     --font-size-md: clamp(0.625rem, 0.305vw + 0.55rem, 0.79rem);
@@ -56,25 +57,51 @@
 
 }
 
+/* Locally Scoped Custom Properties video Kevin Powell */
+
 body {
+width: 100vw;
 height: 100vh;
-background-image: url('assets/images/image.jpg');
+background-image: url('assets/images/image.jpg'); 
 background-size: cover;
 background-repeat: no-repeat;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+display: flex; /* Change */
+flex-direction: row; 
+justify-content: space-between;
+}
+
+.side-container {
+  width: 33vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+width: 200px;
+height: 200px;
+}
+
+.form-wrapper {
+  width: 66vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: color-mix(in srgb, var(--violet), transparent 50%);
+}
+
+form {
+  border: 10px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
     font-size: 42px;
     color: white;
-}
-
-.logo-container {
-    width: 200px;
-    height: 200px;
 }
 
 /* media query  when mobile background image -50below*/

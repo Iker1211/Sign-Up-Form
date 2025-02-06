@@ -8,26 +8,55 @@
     <title>The-42-Form</title>
 </head>
 <body>
-<div class="logo-container">
-    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <!-- Yellow circle -->
-        <circle cx="100" cy="100" r="100" fill="var(--yellow)" />
-        
-        <!-- See how can make 42 be transparent to the background. Maybe z-index -->
-        <text
-            x="100"
-            y="120"
-            font-family="var(--font-family)"
-            font-size="80"
-            font-weight="bold"
-            fill="var(--blue)"
-            text-anchor="middle"
-            dominant-baseline="middle"
-        >
-            42
-        </text>
-    </svg>
-</div>
+<div class="side-container">
+    <div class="logo-container">
+        <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Yellow circle -->
+            <circle cx="100" cy="100" r="100" fill="var(--yellow)" />
+            <!-- How to just import the svg-->
+            <!-- See how can make 42 be transparent to the background. Maybe z-index -->
+             <!--Maybe grid. When they chock, change layout. Slaying the Dragon video-->
+            <text
+                x="100"
+                y="120"
+                font-family="var(--font-family)"
+                font-size="80"
+                font-weight="bold"
+                fill="var(--blue)"
+                text-anchor="middle"
+                dominant-baseline="middle"
+            >
+                42
+            </text>
+        </svg>
+    </div>
     <h1 class="greetings">Good Morning</h1>
+</div>
+
+<!--Legend element-->
+<!--Phone number prefijo how-->
+    <div class="form-wrapper">
+        <form action="example.com/path" method="post">
+            <h2>This is the form</h2>
+            <fieldset>
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" placeholder="Larry" name="first_name" required>
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" placeholder="Ca..." name="last_name" required>
+            </fieldset>
+            <fieldset>
+            <label for="user_email">Email:</label>
+            <input type="email" id="user_email" placeholder="Email" name="email" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" id="phone" placeholder="Your phone numer" name="phone_number" required>
+            </fieldset>
+            <fieldset>
+            <label for="user_password">Password:</label>
+            <input type="password" id="user_password" name="password" required>
+            <label for="user_confirmed_password">Confirm Password:</label>
+            <input type="password" id="user_confirmed_password" name="password_confirmed" required>
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
