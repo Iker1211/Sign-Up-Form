@@ -23,9 +23,10 @@ height: 100vh;
 background-image: url('../assets/images/image.jpg'); 
 background-size: cover;
 background-repeat: no-repeat;
-display: flex; /* Change */
+display: flex;
 flex-direction: row; 
 justify-content: space-between;
+box-sizing: border-box;
 }
 
 .side-container {
@@ -42,19 +43,36 @@ width: 200px;
 height: 200px;
 }
 
-.form-wrapper {
+.right-container {
   width: 66vw;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: color-mix(in srgb, var(--violet), transparent 50%);
 }
 
 form {
+  width: 50%;
   border: 10px solid black;
   display: flex;
   flex-direction: column;
+}
+
+/* Use this */
+input[type="email"]::placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="email"]::-webkit-input-placeholder {
+  color: blue;
+}
+
+input[type="email"]:focus:valid {
+  background-color: green;
+}
+
+input[type="email"]:focus:invalid {
+  background-color: red;
 }
 
 h1 {
@@ -63,3 +81,21 @@ h1 {
 }
 
 /* media query  when mobile background image -50below*/
+
+@media only screen and (max-width: 699px) {
+
+  body {
+    display: flex; 
+    flex-direction: column; 
+    overflow-x: hidden;
+  }
+
+  .side-container {
+    width: 100%;
+  }
+
+  .right-container {
+    width: 100%;
+  }
+
+}
