@@ -11,13 +11,27 @@
     --font-size-md: clamp(0.625rem, 0.305vw + 0.55rem, 0.79rem);
     --font-size-lg: clamp(0.975rem, 0.625vw + 0.82rem, 1.32rem);
     --font-size-xl: clamp(1.525rem, 1.4875vw + 1.15625rem, 2.34375rem);
-    --font-family: "Arial", sans-serif;
+}
 
+@font-face {
+  font-family: 'norse-bold';
+  src: url('../assets/fonts/norse-bold.woff2') format(woff2);
+}
+
+@font-face {
+  font-family: 'open-sans';
+  src: url('../assets/fonts/open-sans.woff2') format(woff2);
+}
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../assets/fonts/roboto.woff2') format(woff2);
 }
 
 /* Locally Scoped Custom Properties video Kevin Powell */
 
 body {
+font-family: 'open-sans';
 width: 100vw;
 height: 100vh;
 background-image: url('../assets/images/image.jpg'); 
@@ -97,5 +111,4 @@ h1 {
   .right-container {
     width: 100%;
   }
-
 }
