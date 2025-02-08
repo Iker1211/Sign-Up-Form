@@ -8,9 +8,6 @@
     --transparent: #00ffffff;
     --line-height: 1.6;
     --font-size-base: 1rem;
-    --font-size-md: clamp(0.625rem, 0.305vw + 0.55rem, 0.79rem);
-    --font-size-lg: clamp(0.975rem, 0.625vw + 0.82rem, 1.32rem);
-    --font-size-xl: clamp(1.525rem, 1.4875vw + 1.15625rem, 2.34375rem);
 }
 
 @font-face {
@@ -32,7 +29,9 @@
 
 body {
 position: relative;
+overflow: hidden;
 font-family: 'open-sans';
+font-size: var(--font-size-base);
 width: 100vw;
 height: 100vh;
 background-image: url('../assets/images/image.jpg'); 
@@ -61,6 +60,7 @@ height: 200px;
 .right-container {
   width: 66vw;
   height: 100%;
+  padding: 2vw; /**/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +70,6 @@ height: 200px;
 }
 
 form {
-  width: 50%;
   border: 10px solid black;
   display: flex;
   flex-direction: column;
@@ -92,8 +91,15 @@ input[type="email"]:focus:invalid {
 }
 
 h1 {
-    font-size: 42px;
+  font-size: clamp(1.5rem, 5vw, 3rem);
     color: white;
+}
+
+p {
+  color: var(--white);
+  font-weight: bold;
+  width: minmax(20% + 2rem, 77ch );
+  font-size: clamp(1rem, 4vw, 1.25rem);
 }
 
 /* media query  when mobile background image -50below*/
@@ -103,7 +109,6 @@ h1 {
   body {
     display: flex; 
     flex-direction: column; 
-    overflow-x: hidden;
     background-image: none;
   }
 
@@ -111,7 +116,7 @@ h1 {
     content: "";
     position: absolute;
     width: 200%;
-    height: 100%;
+    height: 150%;
     top: 0;
     left: -50%;
     z-index: -1;
@@ -121,11 +126,26 @@ h1 {
     transform: rotate(90deg); /* css rotate background image, css background rotate */
   }
 
+  .logo-container {
+
+    & svg {
+      width: 66%;
+      height: 66%; 
+    }
+  }
+
   .side-container {
     width: 100%;
+    height: 15vh;
+    margin: 2rem;
+
+    & .greetings {
+      display: none;
+    }
   }
 
   .right-container {
     width: 100%;
+    height: 200%
   }
 }
