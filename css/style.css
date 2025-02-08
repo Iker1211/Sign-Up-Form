@@ -78,6 +78,14 @@ h1 {
     color: white;
 }
 
+.greetings {
+  text-shadow: 1px 2px 5px var(--black);
+}
+
+text {
+  text-shadow: 1px 2px 3px var(--black);
+}
+
 p {
   text-align: center;
   color: var(--white);
@@ -88,13 +96,21 @@ p {
 
 p:nth-child(2n) {
   line-height: calc(var(--line-height) + 1 );
-  text-shadow: 2px 2px 5px black;
-  font-size: calc(clamp(1rem, 4vw, 1.25rem) + 1em);
+  text-shadow: 2px 2px 5px var(--black);
+  font-size: calc(clamp(1rem, 4vw, 1.25rem) + 1rem);
+}
+
+span[aria-label="required"] {
+  color: red;
 }
 
 form {
   display: flex;
   flex-direction: column;
+}
+
+form > p {
+  font-size: calc(clamp(1rem, 4vw, 1.25rem) - 1vh);
 }
 
 form > div {
@@ -133,6 +149,7 @@ input[type="email"]:focus:invalid {
 
 button {
   width: 65%;
+  height: 2rem;
   margin: auto;
   padding: 5px;
   font: bold 0.6em sans-serif;
@@ -140,7 +157,8 @@ button {
   border-radius: 5px;
   background: var(--yellow);
   cursor: pointer;
-  transform: rotate(-1.5deg);
+  transform: rotate(-2deg);
+  font-size: calc(clamp(1rem, 4vw, 1.25rem ) - 8px) ;
 }
 
 button:after {
@@ -204,10 +222,15 @@ button:focus {
 
   .right-container {
     width: 100%;
-    height: 200%
+    gap: 1rem;
   }
+
   .text-wrapper {
     display: none;
+  }
+
+  p:nth-child(2n) {
+    line-height: var(--line-height);
   }
 
   button {
