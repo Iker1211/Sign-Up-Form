@@ -63,19 +63,54 @@ height: 200px;
   padding: 2vw; /**/
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; 
+  gap: 2rem;
   align-items: center;
   background-color: color-mix(in srgb, var(--blue), transparent 15%);
   box-shadow: -1rem 0 1rem 8px color-mix(in srgb, var(--blue), transparent 15%);
 }
 
+
+
+/* Use this */
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+    color: white;
+}
+
+p {
+  text-align: center;
+  color: var(--white);
+  font-weight: bold;
+  width: minmax(20% + 2rem, 77ch );
+  font-size: clamp(1rem, 4vw, 1.25rem);
+}
+
+p:nth-child(2n) {
+  line-height: calc(var(--line-height) + 1 );
+  text-shadow: 2px 2px 5px black;
+  font-size: calc(clamp(1rem, 4vw, 1.25rem) + 1em);
+}
+
 form {
-  border: 10px solid black;
   display: flex;
   flex-direction: column;
 }
 
-/* Use this */
+form > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 2rem;
+  width: 45rem; /**/ /* wrap */
+
+  & .control-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 input[type="email"]::placeholder,
 input[type="email"]::-moz-placeholder,
 input[type="email"]::-webkit-input-placeholder {
@@ -90,16 +125,39 @@ input[type="email"]:focus:invalid {
   background-color: red;
 }
 
-h1 {
-  font-size: clamp(1.5rem, 5vw, 3rem);
-    color: white;
+.button-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-p {
-  color: var(--white);
-  font-weight: bold;
-  width: minmax(20% + 2rem, 77ch );
-  font-size: clamp(1rem, 4vw, 1.25rem);
+button {
+  width: 65%;
+  margin: auto;
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid var(--black);
+  border-radius: 5px;
+  background: var(--yellow);
+  cursor: pointer;
+  transform: rotate(-1.5deg);
+}
+
+button:after {
+  content: '🦚';
+}
+
+button:before {
+  content: '➡️';
+}
+
+button:active::after {
+  content: '🦿';
+}
+
+buton:hover,
+button:focus {
+  background: color-mix(in srgb, var(--yellow), var(--white))
 }
 
 /* media query  when mobile background image -50below*/
@@ -147,5 +205,12 @@ p {
   .right-container {
     width: 100%;
     height: 200%
+  }
+  .text-wrapper {
+    display: none;
+  }
+
+  button {
+    width: 85%;
   }
 }
