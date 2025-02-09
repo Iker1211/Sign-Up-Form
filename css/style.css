@@ -70,8 +70,6 @@ height: 200px;
   box-shadow: -1rem 0 1rem 8px color-mix(in srgb, var(--blue), transparent 15%);
 }
 
-
-
 /* Use this */
 h1 {
   font-size: clamp(1.5rem, 5vw, 3rem);
@@ -79,7 +77,7 @@ h1 {
 }
 
 .greetings {
-  text-shadow: 1px 2px 5px var(--black);
+  text-shadow: 1px 2px 3px var(--white);
 }
 
 text {
@@ -96,7 +94,7 @@ p {
 
 p:nth-child(2n) {
   line-height: calc(var(--line-height) + 1 );
-  text-shadow: 2px 2px 5px var(--black);
+  text-shadow: 5px 2px 5px var(--black), 2px 2px 2px color-mix(in srgb, var(--white), transparent 50%);
   font-size: calc(clamp(1rem, 4vw, 1.25rem) + 1rem);
 }
 
@@ -153,24 +151,12 @@ button {
   margin: auto;
   padding: 5px;
   font: bold 0.6em sans-serif;
-  border: 2px solid var(--black);
+  border: 3px solid var(--black);
   border-radius: 5px;
   background: var(--yellow);
   cursor: pointer;
   transform: rotate(-2deg);
   font-size: calc(clamp(1rem, 4vw, 1.25rem ) - 8px) ;
-}
-
-button:after {
-  content: '🦚';
-}
-
-button:before {
-  content: '➡️';
-}
-
-button:active::after {
-  content: '🦿';
 }
 
 buton:hover,
@@ -179,7 +165,6 @@ button:focus {
 }
 
 /* media query  when mobile background image -50below*/
-
 @media only screen and (max-width: 699px) {
 
   body {
