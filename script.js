@@ -1,3 +1,40 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form');
+    const containers = document.querySelectorAll('.control-container');
+  
+    function validateInput(container) {
+      const input = container.querySelector('input');
+      if (input.validity.valid) {
+        container.classList.add('input-valid');
+      } else {
+        container.classList.remove('input-valid');
+      }
+    }
+  
+    containers.forEach(container => {
+      const input = container.querySelector('input');
+      // Validar en tiempo real
+      input.addEventListener('input', function() {
+        validateInput(container);
+      });
+    });
+  
+    // Validar al enviar el formulario
+    form.addEventListener('submit', function(event) {
+      let isValid = true;
+      containers.forEach(container => {
+        validateInput(container);
+        const input = container.querySelector('input');
+        if (!input.validity.valid) {
+          isValid = false;
+        }
+      });
+      if (!isValid) {
+        event.preventDefault();
+      }
+    });
+  });
+
 let greetings = document.querySelector('.greetings');
 
 const d = new Date();
@@ -49,3 +86,4 @@ btn.addEventListener('click', (event) => {
 });
 
 var valid_input = document.querySelector('')
+
