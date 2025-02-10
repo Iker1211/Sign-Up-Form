@@ -47,3 +47,5 @@ btn.addEventListener('click', (event) => {
     less_ballons(medium_width);
     });
 });
+
+var valid_input = document.querySelector('')

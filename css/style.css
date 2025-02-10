@@ -5,6 +5,8 @@
     --black: #1a1a1a;
     --gray: #5a5a5a;
     --yellow: #e3c200;
+    --red: #f3464a;
+    --green: #12e193;
     --transparent: #00ffffff;
     --line-height: 1.6;
     --font-size-base: 1rem;
@@ -105,6 +107,7 @@ span[aria-label="required"] {
 form {
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 form > p {
@@ -117,12 +120,23 @@ form > div {
   justify-content: center;
   margin-top: 1rem;
   gap: 2rem;
-  width: 45rem; /**/ /* wrap */
+  width: 100%;
 
   & .control-container {
     display: flex;
     flex-direction: column;
+    width: clamp(45vw, 40%, 45%); 
   }
+}
+
+label {
+  color: var(--white);
+  font: bold;
+}
+
+input {
+  border: 3px solid var(--black);
+  border-radius: 5px;
 }
 
 input[type="email"]::placeholder,
@@ -131,12 +145,14 @@ input[type="email"]::-webkit-input-placeholder {
   color: blue;
 }
 
-input[type="email"]:focus:valid {
-  background-color: green;
+input:valid {
+  border: 3px solid green;
+  background-color: color-mix(in srgb, var(--green), transparent 80%);
 }
 
-input[type="email"]:focus:invalid {
-  background-color: red;
+input:focus:invalid {
+  border: 3px solid red;
+  background-color: color-mix(in srgb, var(--red), transparent 80%);
 }
 
 .button-container {
