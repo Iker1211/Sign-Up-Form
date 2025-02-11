@@ -70,6 +70,12 @@ btn.addEventListener('click', (event) => {
     btn.style.height = '3rem';
     btn.style.fontSize = 'clamp(1rem, 4vw, 1.25rem )';
 
+    let advice = document.getElementById('advice');
+
+    let p = document.createElement('p');
+    p.textContent = 'No backend for now';
+    advice.appendChild(p);
+
     function less_ballons(x) {
         if (x.matches) { 
         btn.textContent = '🎈🎈🎈🎈🎈🎈🦚🎈🎈🎈🎈🎈🎈';
