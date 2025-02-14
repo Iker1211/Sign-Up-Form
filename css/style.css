@@ -43,6 +43,13 @@ display: flex;
 flex-direction: row; 
 justify-content: space-between;
 box-sizing: border-box;
+
+& > p {
+  position: absolute;
+  top: 95%;
+  left: 10%;
+  font-size: calc(clamp(1rem, 4vw, 1.25rem) - 5px);
+}
 }
 
 .side-container {
@@ -196,6 +203,10 @@ button:focus {
     display: flex; 
     flex-direction: column; 
     background-image: none;
+
+    & > p {
+      display: none;
+    }
   }
 
   body::before {
