@@ -75,6 +75,7 @@ btn.addEventListener('click', (event) => {
 
     btn.style.height = '3rem';
     btn.style.fontSize = 'clamp(1rem, 4vw, 1.25rem )';
+    btn.style.transform = 'rotate(-2deg)';
 
     if (advice_message === 1) {
       
