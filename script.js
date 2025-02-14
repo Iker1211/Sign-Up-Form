@@ -65,16 +65,26 @@ medium_width.addEventListener("change", function() {
 less_arrows(medium_width);
 });
 
+let advice_message = 0;
+let advice_wrapper = document.getElementById('advice_wrapper');
+let advice = document.getElementById('advice'); 
+
 btn.addEventListener('click', (event) => {
+
+    advice_message++;
 
     btn.style.height = '3rem';
     btn.style.fontSize = 'clamp(1rem, 4vw, 1.25rem )';
 
-    let advice = document.getElementById('advice');
+    if (advice_message === 1) {
+      
+      advice_wrapper.style.display = 'none';
 
-    let p = document.createElement('p');
-    p.textContent = 'No backend for now';
-    advice.appendChild(p);
+      let p = document.createElement('p');
+      p.style.fontSize = 'calc(clamp(1rem, 4vw, 1.25rem) + 1vw)';
+      p.textContent = 'No backend for now';
+      advice.appendChild(p);
+    }
 
     function less_ballons(x) {
         if (x.matches) { 

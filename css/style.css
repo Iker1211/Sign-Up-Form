@@ -94,6 +94,12 @@ p {
   font-size: clamp(1rem, 4vw, 1.25rem);
 }
 
+#advice_wrapper {
+  text-align: center;
+  color: var(--white);
+  font-weight: bold;
+}
+
 p:nth-child(2n) {
   line-height: calc(var(--line-height) + 1 );
   text-shadow: 5px 2px 5px var(--black), 2px 2px 2px color-mix(in srgb, var(--white), transparent 50%);
@@ -110,7 +116,7 @@ form {
   width: 80%;
 }
 
-form > p {
+form {
   font-size: calc(clamp(1rem, 4vw, 1.25rem) - 1vh);
 }
 
@@ -175,7 +181,6 @@ button {
   border-radius: 5px;
   background: var(--yellow);
   cursor: pointer;
-  transform: rotate(-2deg);
   font-size: calc(clamp(1rem, 4vw, 1.25rem ) - 8px) ;
 }
 
