@@ -6,3 +6,8 @@ Used svg self-made logo with little function to say the Greetings according to t
 - HTML5
 - CSS3
 - JavaScript
+
+## Credits
+## Credits
+- CSS Reset from Josh Comeau: <a href="https://www.joshwcomeau.com/css/custom-css-reset/" target="_blank">A Modern CSS Reset</a>
+- svg logo is scratch-made
